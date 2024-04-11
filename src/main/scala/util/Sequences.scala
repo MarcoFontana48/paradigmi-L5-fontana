@@ -51,6 +51,12 @@ object Sequences: // Essentially, generic linkedlists
       def reverse(): Sequence[A] = sequence match
         case Cons(h, t) => t.reverse().concat(Cons(h, Nil()))
         case _ => Nil()
+        
+      //added 'size' for ex03
+      def size(): Int = sequence match
+        case Cons(_, t) => 1 + t.size()
+        case _ => 0
+        
 @main def trySequences =
   import Sequences.* 
   val sequence = Sequence(1, 2, 3)
