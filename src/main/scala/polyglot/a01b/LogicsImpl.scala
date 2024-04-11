@@ -23,5 +23,5 @@ class LogicsImpl(private val size: Int, private val mines: Int) extends Logics:
       selected = selected.concat(Sequence(Pair(x, y)))
       val minesAround = minesSequence.filter(p => Math.abs(p.getX - x) <= 1 && Math.abs(p.getY - y) <= 1).size()
       OptionToOptional(ScalaOptional.Just(minesAround))
-      
+
   def won: Boolean = selected.size() + minesSequence.size() == size * size

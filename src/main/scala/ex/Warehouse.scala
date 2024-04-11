@@ -10,9 +10,10 @@ trait Item:
 object Item:
 //  def apply(code: Int, name: String, tags: Sequence[String]): Item = ItemImpl(code, name, tags)
 
-  //after refactor
+  //task 2c (refactor)
   def apply(code: Int, name: String, tags: String*): Item = ItemImpl(code, name, Sequence(tags: _*))
 
+// task 2a
 case class ItemImpl(code: Int, name: String, tags: Sequence[String]) extends Item
 
 /**
@@ -52,6 +53,7 @@ end Warehouse
 object Warehouse:
   def apply(): Warehouse = WarehouseImpl()
 
+//task 2b
 case class WarehouseImpl() extends Warehouse:
   private var items: Sequence[Item] = Sequence.empty
 
