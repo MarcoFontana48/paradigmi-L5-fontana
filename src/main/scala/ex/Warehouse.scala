@@ -95,13 +95,3 @@ case class WarehouseImpl() extends Warehouse:
   warehouse.retrieve(dellXps.code) // Just(dellXps)
   warehouse.remove(dellXps) // side effect, remove dell xps from the warehouse
   warehouse.retrieve(dellXps.code) // None
-
-/** Hints:
- * - Implement the Item with a simple case class
- * - Implement the Warehouse keeping a private Sequence of items
- * - Start implementing contains and store
- * - Implement searchItems using filter and contains
- * - Implement retrieve using find
- * - Implement remove using filter
- * - Refactor the code of Item accepting a variable number of tags (hint: use _*)
-*/

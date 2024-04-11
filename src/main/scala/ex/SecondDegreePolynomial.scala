@@ -32,10 +32,3 @@ case class SecondDegreePolynomialImpl(override val secondDegree: Double, overrid
   println((sum, sum.secondDegree, sum.firstDegree, sum.constant)) // 1.0 * X^2 + 1.0 * X + 3.0
   val multipleOperations = fullPolynomial - (anotherPolynomial + simplePolynomial)
   println((multipleOperations, multipleOperations.secondDegree, multipleOperations.firstDegree, multipleOperations.constant)) // 2.0 * X^2 + 1.0 * X + 2.0
-
-/** Hints:
-  *   - implement SecondDegreePolynomial with a SecondDegreePolynomialImpl class, similar to PersonImpl in slides
-  *   - check that equality and toString do not work
-  *   - use a case class SecondDegreePolynomialImpl instead
-  *   - check equality and toString now
-  */
